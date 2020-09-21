@@ -2,12 +2,12 @@ from datetime import datetime
 now = datetime.now()
 
 
-DOB = arr(input('what is your DOB? enter in dd,mm,yy format.'))
+#DOB = arr(input('what is your DOB? enter in dd,mm,yy format.'))
 
 
 class Record:
      
-     def __init__(self,forename,surname,age: int,gender,CS_student,DOB):
+     def __init__(self,forename,surname,age: int,gender,CS_student):
           
           #attributes
           if not isinstance(forename, str):
@@ -33,11 +33,9 @@ class Record:
           while self.__CS_student not in {'True', 'False'}:
                raise TypeError('must be True or False')
 
-          self.__DOB = DOB
 
      #methods
-     def get_DOB(self):
-          return self.__gender
+
           
      def get_forename(self):
           return self.__forename
@@ -81,8 +79,7 @@ class Record:
                
 
 dt_string = now.strftime("%d/%m/%Y %H:%M:%S")         
-record1 = Record('Demira','Thaker',16, 'F','True','16,11,03')
+record1 = Record('Demira','Thaker',16, 'F','True')
 print(record1.get_gender(), dt_string)
-print(record1.get_age())
 record1.set_forename('bob')
 
